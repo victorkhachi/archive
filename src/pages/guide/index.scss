@@ -1,0 +1,40 @@
+@use '../../constants/fonts' as fonts;
+.guide{
+padding-bottom:64px ;
+    .socials{
+        width: fit-content;
+        position:inherit !important;
+        right: 0px;
+    bottom: 0px;
+    }
+    button~div{
+        margin: auto;
+        width: fit-content;
+    }
+   button{
+    @include fonts.button;
+    display: block;
+    // margin:auto;
+    margin: 24px auto;
+   }
+    p{
+        font-family: Kanit;
+font-size: 18px;
+font-weight: 400;
+line-height: 27px;
+letter-spacing: 0em;
+text-align: center;
+color:#203513;
+    }
+.top_img{
+    width: min(100vw,900px);
+    margin: auto;
+    padding: 1em 3em;
+    box-sizing: border-box;
+
+    img{
+        width: 100%;
+
+    }
+}
+}

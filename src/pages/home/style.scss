@@ -1,0 +1,250 @@
+@use "../../constants/backgrounds" as b;
+@use "../../constants/colors" as c;
+@use "../../constants/pixels" as p;
+@use "../../constants/fonts" as font;
+.home {
+  .wrap {
+    .hero {
+      background-image: url("../../img/tytbg.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      justify-content: center;
+      @include b.primaryOverlay;
+      .image {
+        width: 239px;
+        img {
+          width: 100%;
+        }
+        // margin-top: 56px;
+      }
+      h1 {
+        font-size: 48px;
+        font-weight: 700;
+        @include b.textLinearBackground;
+        max-width: 478px;
+        text-align: center;
+        margin-bottom: 24px;
+      }
+      @media screen and (max-width:600px) {
+       h1{
+        width: 80%;
+        font-size: 24px;
+        margin-bottom: 12px;
+       }
+       p {
+        color: c.$dark;
+       font-size: 14px !important;
+       text-align: center;
+       max-width: 422px;
+       margin-bottom: 20px !important;
+       width: 80%;
+     }
+    }
+     p {
+         color: c.$dark;
+        font-size: 22px;
+        text-align: center;
+        max-width: 422px;
+        margin-bottom: 26px;
+      }
+      button {
+        @include font.button;
+      }
+    }
+    .banner {
+      display: flex;
+      align-items: stretch;
+      max-height: 365px;
+      overflow: hidden;
+      .image {
+        flex: 1;
+        img {
+          width: 100%;
+        }
+      }
+      .l-g {
+        position: relative;
+        background-image: url("../../img/plane.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex: 2;
+        display: flex;
+
+        @media screen and (max-width:600px) {
+         h2{
+          font-size: 32px !important;
+         }
+      }
+        h2 {
+          font-size: 64px;
+          font-weight: 700;
+          text-align: center;
+          align-self: center;
+          width: 100%;
+          @include b.textLinearBackgroundLight;
+        }
+      }
+    }
+    .description-detail {
+      position: relative;
+      .background-img {
+        width: 50%;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        &::after {
+          @include b.partialCoverBgImg;
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        img {
+          width: 100%;
+        }
+      }
+      @media screen and (max-width:600px) {
+       .description-wrap{
+        padding: 0 32px !important;flex-direction: column;
+        display: flex !important;
+
+       }
+    }
+      .description-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1200px;
+        gap: 32px;
+        @include p.container;
+        padding-top: 48px;
+        padding-bottom: 48px;
+        .description {
+          color: c.$dark;
+          .title {
+            @include font.title;
+            margin-bottom: 10px;
+          }
+          p {
+            font-size: 18px;
+          }
+        }
+      }
+      .more-detail {
+        max-width: 80%;
+        margin: auto;
+        @media screen and (max-width:600px) {
+        h3{
+          font-size: 16px !important
+        }
+.box{
+  flex-direction: column;
+}
+        .image{
+          width: 100% !important
+        }
+        .venue-boxes{
+          flex-direction: column
+        }
+      }
+        h3 {
+          @include font.title;
+          text-align: center;
+          margin-bottom: 28px;
+          margin-top: 43px;
+        }
+        .box {
+          display: flex;
+          align-items: center;
+          gap: 28px;
+          margin: auto;
+          flex-wrap: wrap;
+          margin-bottom: 28px;
+          width: 90%;
+
+          .image {
+            img {
+              width: 100%;
+            }
+            flex: 7;
+          }
+          .text {
+            flex: 6;
+            // padding-left: 28px;
+            font-size: 18px;
+          }
+        }
+        .venue-boxes {
+          display: flex;
+          gap: 24px;
+          max-width: 100%;
+          flex-wrap: wrap;
+          color: c.$dark;
+          & > div {
+            flex: 1;
+            .image {
+              width: 100%;
+              img {
+                width: 100%;
+              }
+            }
+            .title {
+              font-size: 28px;
+              font-weight: 500;
+              margin-bottom: 10px;
+            }
+            .details {
+              p {
+                color: c.$primary;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 180%;
+                span {
+                  color: c.$dark;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .ttnl {
+      max-width: 574px;
+      background-color: rgba(255, 255, 255, 0.25);
+      margin: auto;
+      padding: 32px 48px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 50px;
+      margin-top: 62px;
+      @media screen and (max-width:600px) {
+       h2{
+        font-size: 24px !important;
+       }
+    }
+      h2 {
+        @include b.textLinearBackground;
+        font-size: 48px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+      p {
+        color: c.$dark;
+        font-size: 22px;
+        margin-bottom: 16px;
+      }
+      a {
+        @include font.button;
+      }
+    }
+  }
+}

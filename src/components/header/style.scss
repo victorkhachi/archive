@@ -1,0 +1,155 @@
+@use "../../constants/backgrounds" as b;
+@use "../../constants/fonts" as font;
+@use "../../constants/colors" as c;
+
+@media screen and (min-width:600px) {
+ .header{
+  display: none !important;
+ }
+ .slide_nav{
+  display: none !important;
+ }
+}
+.header{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  width: 100%;
+  background: #FFFFFF;
+  z-index: 99;
+
+  .quote {
+    font-family: font.$tertiaryFont;
+    font-size: 22px;
+    text-align: right;
+    @include b.textLinearColorLogo;
+  }
+ .div{
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  align-items: center
+ } h1 {
+    @include b.textLinearColorLogo;
+    font-family: font.$secondaryFont;
+    font-size: 22px;
+  }
+}
+header {
+  background-color: c.$white;
+  .wrap {
+    padding: 17px 0;
+    width: 82vw!important;
+    .logo {
+      h1 {
+        @include b.textLinearColorLogo;
+        font-family: font.$secondaryFont;
+        font-size: 28px;
+      }
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .links {
+        margin: 0 calc(46px - 12px);
+        a {
+          font-family: font.$primaryFont;
+          padding: 8px 12px;
+          color: c.$dark;
+          font-size: 14px;
+          text-transform: uppercase;
+          &.selected {
+            background-color: c.$background;
+            border-radius: 4px;
+          }
+        }
+      }
+    }
+    .quote {
+      font-family: font.$tertiaryFont;
+      font-size: 32px;
+      text-align: right;
+      @include b.textLinearColorLogo;
+    }
+    width: calc(100vw - 15vw);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width:600px) {
+  header{
+    display: none;
+  }
+}
+
+.slide_nav{
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  
+  .content{
+    background: #191919;
+    width: 70%;
+    height: 100%;
+
+    
+
+
+    .logo {
+      h1 {
+        @include b.textLinearColorLogo;
+        font-family: font.$secondaryFont;
+        font-size: 28px;
+        text-align: center;
+        padding-top: 12px;
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+    .links{
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+      
+      a{
+        width: 100%;
+        border-bottom: 1px solid #FFFFFF;
+        padding: 12px;
+        display: flex;
+        box-sizing: border-box;
+        justify-content: space-between;
+        color: #FFFFFF;font-family: Kanit;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: 0em;
+        text-align: center;
+        text-transform: capitalize;        
+      }
+      .selected{
+        background: linear-gradient(90deg, #5B9936 0%, #A0A23F 50%, #5B9936 100%), rgba(255, 255, 255, 0.2);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+
+      }
+    }
+  }
+   height: 100vh;
+   left: 0;
+   top: 0;
+}

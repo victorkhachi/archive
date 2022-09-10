@@ -1,0 +1,69 @@
+@use "./colors" as c;
+
+@mixin btnLinearBackground {
+  background: linear-gradient(90deg, #5b9936 0%, #a0a23f 50%, #5b9936 100%),
+    rgba(255, 255, 255, 0.2);
+}
+
+@mixin textLinearBackground {
+  background: linear-gradient(90deg, #203513 0%, #5b9936 50%, #203513 100%);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+@mixin textLinearBackgroundLight {
+  background: linear-gradient(90deg, #e3e3bd 0%, #b5b847 50%, #e3e3bd 100%);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+@mixin textLinearColorLogo {
+  background: linear-gradient(90deg, #5b9936 0%, #a0a23f 50%, #5b9936 100%),
+    rgba(255, 255, 255, 0.2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+@mixin primaryOverlay {
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: c.$background;
+    content: "";
+    z-index: -1;
+  }
+}
+
+@mixin partialCoverBgImg {
+  background: linear-gradient(
+      270deg,
+      rgba(227, 227, 189, 0) 31.48%,
+      #e3e3bd 100%
+    ),
+    linear-gradient(180deg, rgba(227, 227, 189, 0) 0%, #e3e3bd 100%);
+}
+
+@mixin news-letter-bg {
+  background: linear-gradient(
+    90deg,
+    rgba(91, 153, 54, 0) 0%,
+    rgba(91, 153, 54, 0.48) 51.04%,
+    rgba(91, 153, 54, 0) 100%
+  );
+}
+
+@mixin borderGradient {
+  border-image-source: linear-gradient(
+    90deg,
+    #7cad5e 0%,
+    #b5b847 50%,
+    rgba(124, 173, 94, 0.99) 100%
+  );
+}

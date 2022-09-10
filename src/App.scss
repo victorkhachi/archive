@@ -1,0 +1,15 @@
+@use "./constants/fonts" as *;
+@use "./constants/colors" as c;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: $primaryFont;
+  outline: none;
+}
+body {
+  max-width: 1670px;
+  margin: auto;
+  background-color: c.$background;
+}
