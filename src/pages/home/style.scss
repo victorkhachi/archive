@@ -2,6 +2,10 @@
 @use "../../constants/colors" as c;
 @use "../../constants/pixels" as p;
 @use "../../constants/fonts" as font;
+@media screen and (max-width:600px) {
+    .home{ padding-top: 80px !important;
+  }}
+   
 .home {
   .wrap {
     .hero {

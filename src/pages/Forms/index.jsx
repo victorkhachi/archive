@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import './index.scss'
 import Web3 from 'web3';
 import abi from './ABI.json'
+import axios from 'axios';
 
 function Form(props) {
     const [amount,setAmount]=useState(0)
@@ -60,6 +61,10 @@ const sendTransaction=async(e)=>{
   }
 }
 }
+const [countries,setCountries]=useState([])
+useEffect(()=>{
+  axios.get('https://restcountries.com/v2/all').then(response=>setCountries(response.data))
+},[])
     return (
         <div className='home form'>
             <div className="wrap">
@@ -84,11 +89,16 @@ const sendTransaction=async(e)=>{
                     <h1>Fill the form below with your details to continue</h1>
                     <form action="">
                         <input  type="text" placeholder='Full Name' />
-                        <input type="text" placeholder='Date of birth' />
-                        <input type="number" placeholder='Phone No' />
+                        <input type="date" placeholder='Date of birth' />
+                        <input type="tel" placeholder='Phone No' />
                         <input type="Email" placeholder='Email'/>
                         <select name="" id="">
                             <option disabled selected value="">Country</option>
+                            {
+                                countries.map(country=>(
+                                    <option value={country.name}>{country.name}</option>
+                                ))
+                            }
                         </select>
 
                         <p>Total  : <span>${amount}</span></p>
