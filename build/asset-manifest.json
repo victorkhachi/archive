@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5f680c8f.css",
+    "main.js": "/static/js/main.94bffb4a.js",
+    "static/js/787.9bb1823b.chunk.js": "/static/js/787.9bb1823b.chunk.js",
+    "static/media/tytbg.png": "/static/media/tytbg.ce1fa1c00b49a9573fb3.png",
+    "static/media/blog.png": "/static/media/blog.25db70633af52eb23905.png",
+    "static/media/guide.png": "/static/media/guide.19774a5b3c3bda541e84.png",
+    "static/media/tower.png": "/static/media/tower.17ea9a2a583535600d74.png",
+    "static/media/Rectangle 53news-letter-bg.png": "/static/media/Rectangle 53news-letter-bg.1271b15fc2a1d11ec03b.png",
+    "static/media/event.png": "/static/media/event.c99f0d72e44c3ca65016.png",
+    "static/media/article.png": "/static/media/article.e8f7accae6692375790d.png",
+    "static/media/plane.png": "/static/media/plane.876b3bcdb83e89f91c59.png",
+    "static/media/rafiki.png": "/static/media/rafiki.12a95096add631c2b5c1.png",
+    "index.html": "/index.html",
+    "main.5f680c8f.css.map": "/static/css/main.5f680c8f.css.map",
+    "main.94bffb4a.js.map": "/static/js/main.94bffb4a.js.map",
+    "787.9bb1823b.chunk.js.map": "/static/js/787.9bb1823b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5f680c8f.css",
+    "static/js/main.94bffb4a.js"
+  ]
+}
