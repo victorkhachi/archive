@@ -119,7 +119,7 @@ useEffect(()=>{
 
 export default Form;
 
-const Plan=({setPlan,Package})=>{
+ export const Plan=({setPlan,Package})=>{
     const [showType,setShowType]=useState(false)
 
 

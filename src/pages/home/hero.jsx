@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { appContext } from "../../context/appContext";
 import Socials from "../../components/socials";
 
-const Hero = () => {
+const Hero = ({header,content,image}) => {
   const { headerHeight } = useContext(appContext);
 
   return (
@@ -12,13 +12,14 @@ const Hero = () => {
       style={{
         minHeight: `calc(100vh - ${headerHeight}px)`,
       }}>
-      <div className="image">
+    {image &&  <div className="image">
         <img src={imgRafik} alt="hero-img" />
-      </div>
-      <h1>TAKE YOUR TRAVELS TO THE NEXT LEVEL</h1>
+      </div>}
+      <h1>
+        {header}
+      </h1>
       <p>
-        Nullam odio dis egestas vel varius parturient sollicitudin nisi
-        ultricies. Vitae purus arcu enim feugiat suspendisse tellus.
+       {content}
       </p>
       <button>Book a Trip</button>
       <Socials />

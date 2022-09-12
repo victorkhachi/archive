@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div className="home">
       <div className="wrap">
-        <Hero />
+        <Hero image={true} header={'TAKE YOUR TRAVELS TO THE NEXT LEVEL'} content={' Providing luxury and affordable travel services for major sport events.'} />
         <Banner />
         <section className="description-detail">
           <div className="background-img">

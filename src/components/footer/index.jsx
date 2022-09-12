@@ -6,9 +6,9 @@ const Footer = () => {
     <footer>
       <form className="news-letter">
         <h1>Subscribe to our newsletter</h1>
-        <p>
+        {/* <p>
           Hendrerit egestas turpis venenatis vitae. In sit nisl tortor vel id.
-        </p>
+        </p> */}
         <label htmlFor="email">
           <input type="text" name="email" placeholder="Your email" />
           <button type="submit">Subscribe</button>
