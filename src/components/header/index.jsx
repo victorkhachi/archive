@@ -22,10 +22,10 @@ const navLinks = [
     name: "availability",
     path: "/availability",
   },
-  {
-    name: "blog",
-    path: "/blog",
-  },
+  // {
+  //   name: "blog",
+  //   path: "/blog",
+  // },
 ];
 
 const Header = () => {

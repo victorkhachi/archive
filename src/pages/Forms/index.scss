@@ -10,7 +10,15 @@
   z-index: 999;
   top: 0;
   padding-bottom: 64px;
+   @media screen and (max-width:600px) {
+  .wrap{
+    padding-top: unset !important;
 
+    .back{
+      margin-left: 24px !important;
+    }
+  }
+   }
   .wrap {
     width: min(100vw, 65em);
     // height: 100%;
