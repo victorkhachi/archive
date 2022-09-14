@@ -68,7 +68,9 @@ export default function Guide() {
         {packages.map(Package=>(<Plan Package={Package}/>))}
         </div>
         <p>Gold upgrade: Requires a 20% increase in fees
+          <br />
 Diamond upgrade: Requires a 45% increase in fees.
+<br />
 To know more, contact our customer service agent at <a href="tel:++44 7418 366386">+44 7418 366386</a></p>
       </div>
     </div>
