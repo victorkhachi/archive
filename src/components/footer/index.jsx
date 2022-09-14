@@ -42,9 +42,9 @@ const Footer = () => {
           </div>
           <div className="box">
             <div className="title">email address</div>
-            <p>tim.jennings@example.com</p>
+            <p>sportyleisure@qualityservice.com</p>
             <div className="title">Phone</div>
-            <p>(239) 555-0108</p>
+            <p>+44 7418 366386</p>
           </div>
           <div className="box"></div>
         </div>

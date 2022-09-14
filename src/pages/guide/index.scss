@@ -54,7 +54,7 @@ border-radius: 10px;
     gap: 32px;
     align-items: center;
     flex-wrap: wrap;
-
+    overflow: hidden;
     h1{
         color: #203513;font-family: Kanit;
         font-size: 28px;
@@ -119,7 +119,7 @@ text-align: left;
     }
 
     .prices~p{
-        width: 30em;
+        width:min(30em,90vw);
         border: none;
 
         a{
