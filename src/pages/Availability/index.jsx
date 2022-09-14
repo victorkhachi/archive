@@ -14,7 +14,7 @@ import { useState } from "react";
 import Form from "../Forms";
 
 function Availability(props) {
-  //   const navigate= useNavigate()
+    const navigate= useNavigate()
   const [book, setBook] = useState(false);
 
   return (
@@ -37,7 +37,7 @@ function Availability(props) {
             </p>
             <div className="buttons">
               <button onClick={() => setBook(!book)}>Book a Trip</button>
-              <div className="button">Our packages</div>
+              <div className="button" onClick={()=>navigate('/guides')}>Our packages</div>
             </div>
           </div>
         </div>

@@ -21,11 +21,9 @@ const Home = () => {
         <div className="ttnl">
           <h2>Take Your travels to the next level</h2>
           <p>
-            TAKE YOUR TRAVELS TO THE NEXT LEVEL Nullam odio dis egestas vel
-            varius parturient sollicitudin nisi ultricies. Vitae purus arcu enim
-            feugiat suspendisse tellus. Get started
+            TAKE YOUR TRAVELS TO THE NEXT LEVEL 
           </p>
-          <Link to="/">Get started</Link>
+          {/* <Link to="/">Get started</Link> */}
         </div>
       </div>
     </div>

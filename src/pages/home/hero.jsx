@@ -2,10 +2,11 @@ import imgRafik from "../../img/rafiki.png";
 import { useContext } from "react";
 import { appContext } from "../../context/appContext";
 import Socials from "../../components/socials";
+import { useNavigate } from "react-router-dom";
 
 const Hero = ({header,content,image}) => {
   const { headerHeight } = useContext(appContext);
-
+  const navigate=useNavigate()
   return (
     <div
       className="hero"
@@ -21,7 +22,7 @@ const Hero = ({header,content,image}) => {
       <p>
        {content}
       </p>
-      <button>Book a Trip</button>
+      <button onClick={()=>navigate('/availability')}>Book a Trip</button>
       <Socials />
     </div>
   );
