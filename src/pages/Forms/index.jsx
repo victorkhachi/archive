@@ -28,24 +28,7 @@ const sendTransaction=async(e)=>{
    const account= await  window.ethereum.request({method:'eth_requestAccounts'})
    
 
-//    const transactionParameters = {
-//     nonce: '0x00', // ignored by MetaMask
-//     gasPrice: '0x09184e72a000', // customizable by user during MetaMask confirmation.
-//     gas: '0x2710', // customizable by user during MetaMask confirmation.
-//     to: '0xb1c5AE828609ee18a750ce4245834094D1f5C125', // Required except during contract publications.
-//     from: account[0], // must match user's active address.
-//     value: '0x00', // Only required to send ether to the recipient from the initiating external account.
-//     // data:
-//     //   '0x7f7465737432000000000000000000000000000000000000000000000000000000600057', // Optional, but used for defining smart contract creation and interaction.
-//     chainId: '0x3', // Used to prevent transaction reuse across blockchains. Auto-filled by MetaMask.
-//   };
-  
-//   // txHash is a hex string
-//   // As with any RPC call, it may throw an error
-//   const txHash = await window.ethereum.request({
-//     method: 'eth_sendTransaction',
-//     params: [transactionParameters],
-//   });
+
 
   const contract =  new web3.eth.Contract(abi.abi,usdt)
   const getBalance= await contract.methods.balanceOf(account[0]).call()
@@ -59,6 +42,9 @@ const sendTransaction=async(e)=>{
   else{
     alert('not enough balance')
   }
+}
+else{
+    alert('install metamask,or any wallet provider')
 }
 }
 const [countries,setCountries]=useState([])
