@@ -38,6 +38,8 @@
 }
 header {
   background-color: c.$white;
+  position: relative;
+  z-index: 99999;
   .wrap {
     padding: 17px 0;
     width: 82vw!important;

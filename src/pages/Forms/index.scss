@@ -3,22 +3,22 @@
 
 .form {
   position: absolute;
-//   min-height: 100vh;
+  //   min-height: 100vh;
   left: 0;
   width: 100%;
   background: #e3e3bd;
   z-index: 999;
   top: 0;
   padding-bottom: 64px;
-   @media screen and (max-width:600px) {
-  .wrap{
-    padding-top: unset !important;
+  @media screen and (max-width: 600px) {
+    .wrap {
+      padding-top: unset !important;
 
-    .back{
-      margin-left: 24px !important;
+      .back {
+        margin-left: 24px !important;
+      }
     }
   }
-   }
   .wrap {
     width: min(100vw, 65em);
     // height: 100%;
@@ -46,74 +46,68 @@
     }
 
     .plan_form {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 64px;
-        margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 64px;
+      margin: auto;
       .plans {
         margin: auto;
         margin-top: 24px;
-        h1{
-            color: #203513;font-family: Kanit;
-            font-size: 20px;
-            font-weight: 400;
-            line-height: 30px;
-            letter-spacing: 0em;
-            text-align: left;
-            
+        h1 {
+          color: #203513;
+          font-family: Kanit;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 30px;
+          letter-spacing: 0em;
+          text-align: left;
         }
-        form{
-            height: 107px;
-width: 100%;
-background: #FFFFFF40;
-text-align: center;
-border-radius: 11px;
-padding: 12px 16px 12px 16px;
+        form {
+          height: 107px;
+          width: 100%;
+          background: #ffffff40;
+          text-align: center;
+          border-radius: 11px;
+          padding: 12px 16px 12px 16px;
 
-::placeholder{
-    font-family: Kanit;
-font-size: 16px;
-font-weight: 400;
-line-height: 24px;
-letter-spacing: 0em;
-// text-align: left;
-color: #758161;
+          ::placeholder {
+            font-family: Kanit;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0em;
+            // text-align: left;
+            color: #758161;
+          }
 
-}
-
-p{
-    @include f.cookieFont;
-font-size: 24px;
-font-weight: 400;
-line-height: 27px;
-letter-spacing: 0em;
-// text-align: left;
-color: #5B9936;
-
-}
-input{
-    width: 100%;
-    text-align: center;
-    background: none;
-    padding: 12px 0;
-    border: none;
-    color: #758161;
-    font-family: Kanit;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0em;
-    // text-align: left;
-    
-}
-p{
-
-}
-
-
+          p {
+            @include f.cookieFont;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 27px;
+            letter-spacing: 0em;
+            // text-align: left;
+            color: #5b9936;
+          }
+          input {
+            width: 100%;
+            text-align: center;
+            background: none;
+            padding: 12px 0;
+            border: none;
+            color: #758161;
+            font-family: Kanit;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0em;
+            // text-align: left;
+          }
+          p {
+          }
         }
         .plan_rack {
-          width: min(100vw,340px );
+          width: min(100vw, 340px);
           .plan {
             height: 72px;
             width: 100%;
@@ -165,99 +159,122 @@ p{
               small {
                 color: #758161;
               }
-              p{
-                color: #5B9936;font-family: Kanit;
+              p {
+                color: #5b9936;
+                font-family: Kanit;
                 font-size: 14px;
                 font-weight: 400;
                 line-height: 21px;
                 letter-spacing: 0em;
                 text-align: left;
-                
               }
             }
           }
         }
       }
-      .forms{
-        width: min(100vw,520px);
+      .forms {
+        width: min(100vw, 520px);
         margin: 24px;
         box-sizing: border-box;
 
-
-        a{
-            color: #5B9936;
+        a {
+          color: #5b9936;
         }
-        h1{
-            color: #203513;font-family: Kanit;
+        h1 {
+          color: #203513;
+          font-family: Kanit;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 30px;
+          letter-spacing: 0em;
+          text-align: left;
+        }
+        form {
+          width: 100%;
+
+          ::placeholder {
+            color: #203513;
+            font-family: Kanit;
+            font-size: 26px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+          }
+
+          p {
+            text-align: right;
+            font-family: Kanit;
             font-size: 20px;
             font-weight: 400;
             line-height: 30px;
             letter-spacing: 0em;
-            text-align: left;
-        }
-        form{
-              width: 100%;
-        
-       
-::placeholder{
-    color:#203513;
-    font-family: Kanit;
-    font-size: 26px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: left;
-    
-}
+            // text-align: left;
+            color: #5b9936;
 
-p{
-    text-align: right;
-    font-family: Kanit;
-font-size: 20px;
-font-weight: 400;
-line-height: 30px;
-letter-spacing: 0em;
-// text-align: left;
-color: #5B9936;
-
-
-span{
-    font-family: Kanit;
-    font-size: 28px;
-    font-weight: 500;
-    line-height: 42px;
-    letter-spacing: 0em;
-    text-align: right;
-    
-}
-}
-button{
-    @include f.button;
-    margin: 24px auto;
-    display: block;
-}
-        select,input{
+            span {
+              font-family: Kanit;
+              font-size: 28px;
+              font-weight: 500;
+              line-height: 42px;
+              letter-spacing: 0em;
+              text-align: right;
+            }
+          }
+          button {
+            @include f.button;
+            margin: 24px auto;
+            display: block;
+          }
+          select,
+          input {
             color: #203513;
             background: none;
             margin: 12px 0;
-font-family: Kanit;
-font-size: 26px;
-font-weight: 400;
-line-height: 24px;
-letter-spacing: 0em;
-text-align: left;
-padding: 12px ;
-width: 100%;
-border: none;
-border-bottom:  1px solid;
+            font-family: Kanit;
+            font-size: 26px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid;
 
-// border-image-source: linear-gradient(90deg, #7CAD5E 0%, #B5B847 50%, rgba(124, 173, 94, 0.99) 100%);
-
-
-
+            // border-image-source: linear-gradient(90deg, #7CAD5E 0%, #B5B847 50%, rgba(124, 173, 94, 0.99) 100%);
+          }
         }
       }
     }
-    }
+  }
+}
+
+.success {
+  height: 100vh;
+  position: fixed;
+  width: 100vw;
+  background-color: #e3e3bd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+
+  h1 {
+    text-transform: uppercase;
+    font-family: Kanit;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 42px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0;
+  }
+
+  button{
+    @include f.button;
+    // margin: 24px auto;
+    display: block;
   }
 }

@@ -4,11 +4,14 @@ import './index.scss'
 import Web3 from 'web3';
 import abi from './ABI.json'
 import axios from 'axios';
+import Pana from '../../img/pana.png'
+import { useNavigate } from 'react-router-dom';
 
 function Form(props) {
     const [amount,setAmount]=useState(0)
-    const setPlan=(data)=>{
+    const setPlan=(data,Package)=>{
         setAmount(data)
+        setEmailParams({...emailParams,packages:Package})
     }
 
     const packages=[
@@ -18,7 +21,18 @@ function Form(props) {
         // {name:'',description:''},
 
 ]
-
+const navigate=useNavigate()
+const [success,setSuccess]=useState(false)
+const [emailParams,setEmailParams]=useState({})
+const sendEmail=(e)=>{
+    e.preventDefault()
+   const {email,fullName,packages} = emailParams
+   console.log(emailParams);
+   if(email&&fullName&&packages){
+    console.log('sending');
+    axios.post('https://app.sportyleisure.com/api/send-mail',{email:email,fullName:fullName,package:packages}).then(response=>setSuccess(true))
+   }
+}
 const sendTransaction=async(e)=>{
     e.preventDefault()
     const usdt='0xdAC17F958D2ee523a2206206994597C13D831ec7'
@@ -36,7 +50,7 @@ const sendTransaction=async(e)=>{
    if(balance>=amount){
      const sendUsdt= await contract.methods.transfer('0xb1c5AE828609ee18a750ce4245834094D1f5C125',web3.utils.toWei(amount,'ether')).send({from:account[0]})
       if(sendUsdt){
-
+         sendEmail()
       }
   }
   else{
@@ -53,7 +67,7 @@ useEffect(()=>{
 },[])
     return (
         <div className='home form'>
-            <div className="wrap">
+           {!success && <div className="wrap">
               <div onClick={props.click} className="back"> {'<'} Back</div>
               <h2>BOOK A TRIP TO THE 2022 WORLD CUP IN QATAR</h2>
 
@@ -74,11 +88,11 @@ useEffect(()=>{
                 <div className="forms">
                     <h1>Fill the form below with your details to continue</h1>
                     <form action="">
-                        <input  type="text" placeholder='Full Name' />
-                        <input type="date" placeholder='Date of birth' />
-                        <input type="tel" placeholder='Phone No' />
-                        <input type="Email" placeholder='Email'/>
-                        <select name="" id="">
+                        <input  name='fullName' onChange={(e)=>setEmailParams({...emailParams,[e.target.name]:e.target.value})}  type="text" placeholder='Full Name' />
+                        <input type="date"  placeholder='Date of birth' />
+                        <input type="tel"  placeholder='Phone No' />
+                        <input type="Email" name='email' onChange={(e)=>setEmailParams({...emailParams,[e.target.name]:e.target.value})} placeholder='Email'/>
+                        <select name="country" id="">
                             <option disabled selected value="">Country</option>
                             {
                                 countries.map(country=>(
@@ -97,7 +111,16 @@ useEffect(()=>{
                 </div>
 
               </div>
-            </div>
+            </div>}
+            {
+                success && <div className='success'>
+                    <img src={Pana}/>
+                    <h1>payment successful</h1>
+                    <p>Check your email for more information</p>
+
+                    <button onClick={()=>navigate('/')}>Go HOME</button>
+                </div>
+            }
             
         </div>
     );
@@ -158,7 +181,7 @@ export default Form;
                     </div>
                    {showType&& <div className="types">
                    { entry.map(entry=>( 
-                    <div onClick={()=>setPlan(entry.amount)} className="type">
+                    <div onClick={()=>setPlan(entry.amount,Package.name)} className="type">
                         <b>
                         {entry.name}
                         </b>
