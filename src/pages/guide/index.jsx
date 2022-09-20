@@ -5,13 +5,160 @@ import { Plan } from "../Forms";
 
 export default function Guide() {
 
-    const packages=[
-        {name:'Single Package',description:'up to 1'},
-        {name:'Family Package',description:'up to 2'},
-        {name:'Premium Package',description:' up to 5'},
-        // {name:'',description:''},
+  const packages = [
+    {
+     plan:{ name: "Regular Package",
+      description: "up to 1"},
+      entry: 
+        [
+          {
+            name: "Follow your team ",
+            time: "Nov 19- dec 20",
+            amount: 25500,
+          },
+          {
+            name: "Group Stage",
+            time: "Nov 19 -Dec 4",
+            amount: 11800,
+          },
+          {
+            name: "Round of 16 only",
+            time: "Dec 1 - Dec 8",
+            amount: 'sold out',
+          },
+          {
+            name: "Round of 16 through finals",
+            time: "Dec 1 - Dec 20",
+            amount: 22500,
+          },
 
-]
+          {
+            name: "Quarter finals only",
+            time: "Dec 7- Dec 12",
+            amount: 'sold out',
+          },
+          {
+            name: "Quarter finals through finals",
+            time: "Dec 7- Dec 20",
+            amount: 17850,
+          },
+          {
+            name: "Semi finals only",
+            time: "Dec 11- Dec 16",
+            amount: 11250,
+          },
+          {
+            name: "Semi finals through finals",
+            time: "Dec 11- Dec 20",
+            amount: 18000,
+          },
+          {
+            name: "Finals",
+            time: "Dec 20",
+            amount: 11500,
+          },
+        
+      ],
+    },
+    {plan:{ name: "premium", description: "up to 2"},entry: [
+        {
+          name: "Follow your team ",
+          time: "Nov 19- dec 20",
+          amount:45900,
+        },
+        {
+          name: "Group Stage",
+          time: "Nov 19 -Dec 4",
+          amount: 21400,
+        },
+        {
+          name: "Round of 16 only",
+          time: "Dec 1 - Dec 8",
+          amount: 20500,
+        },
+        {
+          name: "Round of 16 through finals",
+          time: "Dec 1 - Dec 20",
+          amount:'sold out',
+        },
+
+        {
+          name: "Quarter finals only",
+          time: "Dec 7- Dec 12",
+          amount: 'sold out',
+        },
+        {
+          name: "Quarter finals through finals",
+          time: "Dec 7- Dec 20",
+          amount: 32500,
+        },
+        {
+          name: "Semi finals only",
+          time: "Dec 11- Dec 16",
+          amount: 19900,
+        },
+        {
+          name: "Semi finals through finals",
+          time: "Dec 11- Dec 20",
+          amount: 28300,
+        },
+        {
+          name: "Finals",
+          time: "Dec 20",
+          amount: 18000,
+        },
+      
+    ], },
+    {plan: {name: "Premium Package", description: " up to 5"},entry: [
+        {
+          name: "Follow your team ",
+          time: "Nov 19- dec 20",
+          amount: 92000,
+        },
+        {
+          name: "Group Stage",
+          time: "Nov 19 -Dec 4",
+          amount: 'sold out',
+        },
+        {
+          name: "Round of 16 only",
+          time: "Dec 1 - Dec 8",
+          amount: 'sold out',
+        },
+        {
+          name: "Round of 16 through finals",
+          time: "Dec 1 - Dec 20",
+          amount: 78000,
+        },
+
+        {
+          name: "Quarter finals only",
+          time: "Dec 7- Dec 12",
+          amount: 'sold out',
+        },
+        {
+          name: "Quarter finals through finals",
+          time: "Dec 7- Dec 20",
+          amount: 72000,
+        },
+        {
+          name: "Semi finals only",
+          time: "Dec 11- Dec 16",
+          amount: 45000,
+        },
+        {
+          name: "Semi finals through finals",
+          time: "Dec 11- Dec 20",
+          amount: 54000,
+        },
+        {
+          name: "Finals",
+          time: "Dec 20",
+          amount: 38000,
+        },
+      
+    ], }]
+    
   return (
     <div className="home guide">
       <div className="top_img">
@@ -65,7 +212,7 @@ export default function Guide() {
       <div className="price_chart">
         <h1>PRICE CHART</h1>
         <div className="prices">
-        {packages.map(Package=>(<Plan Package={Package}/>))}
+        {packages.map(Package=>(<Plan entry={Package.entry} Package={Package.plan}/>))}
         </div>
         <p>Gold upgrade: Requires a 20% increase in fees
           <br />

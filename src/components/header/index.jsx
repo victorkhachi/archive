@@ -37,7 +37,7 @@ const Header = () => {
     <>
       <div onClick={()=>setNav(!showNav)} style={{left:`${showNav?'0':'-100%'}`}} className="slide_nav">
         <div onClick={(e)=>e.stopPropagation()} className="content">
-          <div className="logo"><h1>Sporty Liesure</h1></div>
+          <div className="logo"><h1>Sporty Leisure</h1></div>
           <div className="links">
             {navLinks.map((link, idx) => {
               return (

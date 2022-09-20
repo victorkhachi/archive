@@ -38,7 +38,7 @@ const Footer = () => {
           </div>
           <div className="box">
             <div className="title">contact address</div>
-            <p>25 Horsell Road, London</p>
+            <p>25 Horsell Rd, London N5 1XL, UK</p>
           </div>
           <div className="box">
             <div className="title">email address</div>

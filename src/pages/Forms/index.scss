@@ -278,3 +278,37 @@
     display: block;
   }
 }
+
+.install{
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ background-color: rgba($color: #000000, $alpha: .5);
+
+
+ .content{
+  background: #FFFFFFA3;
+  
+  width: min(420px,100vw);
+ padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  flex-direction: column;
+  border-radius: 11px;
+  
+  button{
+    @include f.button;
+    // margin: 24px auto;
+    display: block;
+
+    
+  }
+ }
+}
